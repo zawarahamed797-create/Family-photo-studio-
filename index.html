@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eternal Moments | فیملی فوٹو اسٹوڈیو</title>
+    <title>Family photo Studio| فیملی فوٹو اسٹوڈیو</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
@@ -23,6 +23,48 @@
             scroll-behavior: smooth;
         }
 
+        /* Moving Ticker (Chalti Pati) */
+        .news-ticker {
+            background: var(--studio-blue);
+            color: white;
+            padding: 8px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            padding-right: 100%;
+            animation: ticker 25s linear infinite;
+            font-weight: bold;
+        }
+
+        @keyframes ticker {
+            0% { transform: translate3d(100%, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Logo Animation */
+        @keyframes logoPulse {
+            0% { transform: scale(1); text-shadow: 0 0 0px rgba(212, 175, 55, 0); }
+            50% { transform: scale(1.05); text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+            100% { transform: scale(1); text-shadow: 0 0 0px rgba(212, 175, 55, 0); }
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: var(--studio-blue);
+            text-decoration: none;
+            font-family: 'Georgia', serif;
+            display: inline-block;
+            animation: logoPulse 3s ease-in-out infinite;
+        }
+
+        .logo span { color: var(--soft-gold); }
+
         /* Navigation */
         nav {
             background: white;
@@ -35,16 +77,6 @@
             top: 0;
             z-index: 1000;
         }
-
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-            color: var(--studio-blue);
-            text-decoration: none;
-            font-family: 'Georgia', serif;
-        }
-
-        .logo span { color: var(--soft-gold); }
 
         /* Hero Section */
         .hero {
@@ -152,8 +184,14 @@
 </head>
 <body>
 
+<div class="news-ticker">
+    <div class="ticker-content">
+         Family photo Studio: خاندان کی کہانی، ہماری زبانی | فیملی، بچوں، اور تقریبات کے لیے بہترین فوٹوگرافی | ابھی بکنگ کریں: 0300-0000000 | ابھی بکنگ کریں: واٹس ایپ پر رابطہ کریں!
+    </div>
+</div>
+
 <nav>
-    <a href="#" class="logo">ETERNAL <span>MOMENTS</span></a>
+    <a href="#" class="logo">MEMORIES <span>STUDIO</span></a>
     <a href="https://wa.me/923000000000" style="text-decoration:none; color:var(--studio-blue); font-weight:bold;">
         <i class="fas fa-camera"></i> بکنگ کریں
     </a>
@@ -219,7 +257,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2026 Eternal Moments Studio. All Rights Reserved.</p>
+    <p>&copy; 2026 Family photo Studio. All Rights Reserved.</p>
     <div style="margin-top: 10px;">
         <i class="fab fa-instagram" style="font-size: 20px; margin: 0 10px;"></i>
         <i class="fab fa-facebook" style="font-size: 20px; margin: 0 10px;"></i>
@@ -231,5 +269,4 @@
 </a>
 
 </body>
-  </html>
-
+</html>
